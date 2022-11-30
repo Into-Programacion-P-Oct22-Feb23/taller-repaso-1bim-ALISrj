@@ -51,18 +51,20 @@ public class Problemarepaso01 {
             entrada.nextLine();
                     
             totalMat = horasMat * cuotaMat;
+            
 
             if (horasNoc >= 10) {
 
                 adicional = (cuotaNoc * 10) / 100;
-
+                cuotaNoc = cuotaNoc + adicional;
             }
 
-            cuotaNoc = cuotaNoc + adicional;
+            
             totalNoc = cuotaNoc * horasNoc;
+            cuotaNoc = 15;
             subTotal = totalMat + totalNoc;
 
-            seguro = (subTotal * seguro) / 100;
+            seguro = (subTotal * 18) / 100;
             total = subTotal - seguro;
 
             mensaje = String.format("%sRol de trabajadores de nombre: %s y "
